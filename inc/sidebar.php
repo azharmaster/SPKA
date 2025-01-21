@@ -86,7 +86,7 @@
 
         <!-- Emergency Contacts -->
         <li class="nav-item">
-          <a href="emergency-contacts.php" class="nav-link">
+          <a href="econtact.php" class="nav-link">
             <i class="nav-icon fas fa-phone-alt"></i>
             <p>Kecemasan</p>
           </a>
@@ -102,7 +102,7 @@
         
         <li class="nav-item">
           <a href="complaint.php" class="nav-link">
-            <i class="nav-icon fas fa-users"></i>
+          <i class="nav-icon fas fa-file-signature"></i>
             <p>Aduan</p>
           </a>
         </li>
@@ -110,7 +110,7 @@
         <!-- System Settings -->
         <li class="nav-item">
           <a href="settings.php" class="nav-link">
-            <i class="nav-icon fas fa-cogs"></i>
+            <i class="nav-icon fas fa-cog"></i>
             <p>Tetapan Sistem</p>
           </a>
         </li>

@@ -35,12 +35,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="page-title">Hubungi</h1>
+            <h1 class="page-title">Tetapan</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="?i=DB">Home</a></li>
-              <li class="breadcrumb-item active">Hubungi</li>
+              <li class="breadcrumb-item active">Tetapan</li>
             </ol>
           </div>
         </div>
@@ -54,7 +54,7 @@
           <div class="col-12">
             <div class="card card-primary card-outline">
             <div class="card-header">
-                <h3 class="card-title">Senarai Hubungi</h3>
+                <h3 class="card-title">Senarai Tetapan</h3>
               </div>
               
               <!-- /.card-header -->
@@ -62,12 +62,11 @@
                 <table id="example1" class="table table-bordered table-hover">
                 <thead class="table table-secondary">
                   <tr class="text-left">
-                      <th>#</th>
-                      <th>Nama</th>
-                      <th>No.Tel</th>
+                    <th>#</th>
+                      <th>Tajuk</th>
+                      <th>Penerangan</th>
                       <th>T.Cipta </th>
-					  <th>Tindakan</th>
-											
+					  <th>Tindakan</th>					
                   </tr>
                 </thead>
                   <tbody>

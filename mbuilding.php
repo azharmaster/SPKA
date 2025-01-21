@@ -70,10 +70,10 @@
                       <th>Penyelia </th>
                       <th>No.Tel </th>
                       <th>Alamat </th>
-                      <th>Pelan Lantai</th>
+                      <th>P.Lantai</th>
                       <th>Koordinat</th>
-                      <th>Link CCTV</th>
-                      <th>Jumlah Orang</th>
+                      <th>CCTV</th>
+                      <th>Jum Orang</th>
                       <th>T.Cipta </th>
 											<th>Tindakan</th>
                   </tr>

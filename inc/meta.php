@@ -1,5 +1,5 @@
 <title>SPKA</title>
-<!-- <link href="../img/pakar/21.png" rel="icon"> -->
+<link href="file/dist/img/AdminLTELogo.png" rel="icon">
 <meta name="title" content="SPKA">
 <meta name="description" content="SPKA">
 <meta name="keywords" content="SPKA">
