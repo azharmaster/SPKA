@@ -56,6 +56,9 @@
             <div class="card card-primary card-outline">
             <div class="card-header">
                 <h3 class="card-title">Senarai Balai</h3>
+                <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#supervisorModal">
+  Tambah Data
+</button>
               </div>
               
               <!-- /.card-header -->
@@ -74,8 +77,84 @@
 											<th>Tindakan</th>
                   </tr>
                 </thead>
-                  <tbody>
-                  </tbody>
+                <tbody>
+  <tr>
+    <td>1</td>
+    <td>BB001</td>
+    <td>Encik Ahmad bin Razak</td>
+    <td>03-12345678</td>
+    <td>No. 1, Jalan Bomba, 50000 Kuala Lumpur</td>
+    <td>3.1390° N, 101.6869° E</td>
+    <td>30</td>
+    <td>01/01/2023</td>
+    <td>
+      <button class="btn btn-primary btn-sm">Lihat</button>
+      <button class="btn btn-warning btn-sm">Edit</button>
+      <button class="btn btn-danger btn-sm">Padam</button>
+    </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>BB002</td>
+    <td>Encik Ismail bin Rahim</td>
+    <td>03-23456789</td>
+    <td>No. 22, Jalan Merah, 47000 Petaling Jaya</td>
+    <td>3.1072° N, 101.6078° E</td>
+    <td>25</td>
+    <td>01/06/2023</td>
+    <td>
+      <button class="btn btn-primary btn-sm">Lihat</button>
+      <button class="btn btn-warning btn-sm">Edit</button>
+      <button class="btn btn-danger btn-sm">Padam</button>
+    </td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>BB003</td>
+    <td>Encik Zainal bin Osman</td>
+    <td>03-34567890</td>
+    <td>No. 33, Jalan Shah Alam, 40150 Shah Alam</td>
+    <td>3.0738° N, 101.5183° E</td>
+    <td>40</td>
+    <td>01/09/2023</td>
+    <td>
+      <button class="btn btn-primary btn-sm">Lihat</button>
+      <button class="btn btn-warning btn-sm">Edit</button>
+      <button class="btn btn-danger btn-sm">Padam</button>
+    </td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>BB004</td>
+    <td>Encik Hakim bin Aziz</td>
+    <td>03-45678901</td>
+    <td>No. 44, Jalan Bukit Indah, 81200 Johor Bahru</td>
+    <td>1.4927° N, 103.7414° E</td>
+    <td>35</td>
+    <td>01/03/2023</td>
+    <td>
+      <button class="btn btn-primary btn-sm">Lihat</button>
+      <button class="btn btn-warning btn-sm">Edit</button>
+      <button class="btn btn-danger btn-sm">Padam</button>
+    </td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>BB005</td>
+    <td>Encik Ramli bin Hashim</td>
+    <td>03-56789012</td>
+    <td>No. 55, Jalan Api, 50450 Kuala Lumpur</td>
+    <td>3.1599° N, 101.7090° E</td>
+    <td>50</td>
+    <td>01/07/2023</td>
+    <td>
+      <button class="btn btn-primary btn-sm">Lihat</button>
+      <button class="btn btn-warning btn-sm">Edit</button>
+      <button class="btn btn-danger btn-sm">Padam</button>
+    </td>
+  </tr>
+</tbody>
+
                 </table>
               </div>
               <!-- /.card-body -->
@@ -91,7 +170,52 @@
       <!-- /.container-fluid -->
     </section>
 
-    
+    <!-- Modal -->
+<div class="modal fade" id="supervisorModal" tabindex="-1" role="dialog" aria-labelledby="supervisorModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="supervisorModalLabel">Tambah Balai</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="supervisorForm">
+          <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id" required>
+          </div>
+          <div class="form-group">
+            <label for="supervisor">Penyelia</label>
+            <input type="text" class="form-control" id="supervisor" name="supervisor" required>
+          </div>
+          <div class="form-group">
+            <label for="phoneNo">No. Tel</label>
+            <input type="text" class="form-control" id="phoneNo" name="phoneNo" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Alamat</label>
+            <textarea class="form-control" id="address" name="address" rows="2" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="coordinates">Koordinat</label>
+            <input type="text" class="form-control" id="coordinates" name="coordinates" placeholder="Contoh: 3.123456, 101.654321" required>
+          </div>
+          <div class="form-group">
+            <label for="employeeCount">Jumlah Anggota</label>
+            <input type="number" class="form-control" id="employeeCount" name="employeeCount" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        <button type="submit" form="supervisorForm" class="btn btn-primary">Simpan</button>
+      </div>
+    </div>
+  </div>
+</div>
+
  
     <!-- /.content -->
   </div>

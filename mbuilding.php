@@ -56,6 +56,10 @@
             <div class="card card-primary card-outline">
             <div class="card-header">
                 <h3 class="card-title">Senarai Bangunan</h3>
+                <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#subscriptionModal">
+  Tambah Data
+</button>
+
               </div>
               
               <!-- /.card-header -->
@@ -78,8 +82,104 @@
 											<th>Tindakan</th>
                   </tr>
                 </thead>
-                  <tbody>
-                  </tbody>
+                <tbody>
+  <tr>
+    <td>1</td>
+    <td>KTG001</td>
+    <td>Pejabat</td>
+    <td>01/01/2023 - 31/12/2023</td>
+    <td>Ahmad bin Ali</td>
+    <td>03-12345678</td>
+    <td>No. 1, Jalan Utama, 50000 Kuala Lumpur</td>
+    <td>3</td>
+    <td>3.1390° N, 101.6869° E</td>
+    <td>Ya</td>
+    <td>25</td>
+    <td>01/01/2023</td>
+    <td>
+      <button class="btn btn-primary btn-sm">Lihat</button>
+      <button class="btn btn-warning btn-sm">Edit</button>
+      <button class="btn btn-danger btn-sm">Padam</button>
+    </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>KTG002</td>
+    <td>Gudang</td>
+    <td>01/06/2023 - 31/05/2024</td>
+    <td>Siti Aminah</td>
+    <td>03-23456789</td>
+    <td>No. 22, Jalan Industri, 47000 Petaling Jaya</td>
+    <td>1</td>
+    <td>3.1072° N, 101.6078° E</td>
+    <td>Tidak</td>
+    <td>15</td>
+    <td>01/06/2023</td>
+    <td>
+      <button class="btn btn-primary btn-sm">Lihat</button>
+      <button class="btn btn-warning btn-sm">Edit</button>
+      <button class="btn btn-danger btn-sm">Padam</button>
+    </td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>KTG003</td>
+    <td>Kilang</td>
+    <td>01/09/2023 - 31/08/2024</td>
+    <td>Ali bin Hassan</td>
+    <td>03-34567890</td>
+    <td>No. 33, Jalan Kilang, 40150 Shah Alam</td>
+    <td>2</td>
+    <td>3.0738° N, 101.5183° E</td>
+    <td>Ya</td>
+    <td>40</td>
+    <td>01/09/2023</td>
+    <td>
+      <button class="btn btn-primary btn-sm">Lihat</button>
+      <button class="btn btn-warning btn-sm">Edit</button>
+      <button class="btn btn-danger btn-sm">Padam</button>
+    </td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>KTG004</td>
+    <td>Pusat Latihan</td>
+    <td>01/03/2023 - 28/02/2024</td>
+    <td>Fatimah binti Yusof</td>
+    <td>03-45678901</td>
+    <td>No. 44, Jalan Latihan, 81200 Johor Bahru</td>
+    <td>4</td>
+    <td>1.4927° N, 103.7414° E</td>
+    <td>Ya</td>
+    <td>35</td>
+    <td>01/03/2023</td>
+    <td>
+      <button class="btn btn-primary btn-sm">Lihat</button>
+      <button class="btn btn-warning btn-sm">Edit</button>
+      <button class="btn btn-danger btn-sm">Padam</button>
+    </td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>KTG005</td>
+    <td>Kompleks Sukan</td>
+    <td>01/07/2023 - 30/06/2024</td>
+    <td>Zulkifli bin Ahmad</td>
+    <td>03-56789012</td>
+    <td>No. 55, Jalan Sukan, 50450 Kuala Lumpur</td>
+    <td>5</td>
+    <td>3.1599° N, 101.7090° E</td>
+    <td>Tidak</td>
+    <td>50</td>
+    <td>01/07/2023</td>
+    <td>
+      <button class="btn btn-primary btn-sm">Lihat</button>
+      <button class="btn btn-warning btn-sm">Edit</button>
+      <button class="btn btn-danger btn-sm">Padam</button>
+    </td>
+  </tr>
+</tbody>
+
                 </table>
               </div>
               <!-- /.card-body -->
@@ -95,7 +195,70 @@
       <!-- /.container-fluid -->
     </section>
 
-    
+    <!-- Modal -->
+<div class="modal fade" id="subscriptionModal" tabindex="-1" role="dialog" aria-labelledby="subscriptionModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="subscriptionModalLabel">Tambah Bangunan</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="subscriptionForm">
+          <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id" required>
+          </div>
+          <div class="form-group">
+            <label for="category">Kategori</label>
+            <input type="text" class="form-control" id="category" name="category" required>
+          </div>
+          <div class="form-group">
+            <label for="subscriptionPeriod">Mula/Tmt Langganan</label>
+            <input type="text" class="form-control" id="subscriptionPeriod" name="subscriptionPeriod" placeholder="Contoh: 01/01/2023 - 31/12/2023" required>
+          </div>
+          <div class="form-group">
+            <label for="supervisor">Penyelia</label>
+            <input type="text" class="form-control" id="supervisor" name="supervisor" required>
+          </div>
+          <div class="form-group">
+            <label for="phoneNo">No. Tel</label>
+            <input type="text" class="form-control" id="phoneNo" name="phoneNo" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Alamat</label>
+            <textarea class="form-control" id="address" name="address" rows="2" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="floor">P.Lantai</label>
+            <input type="text" class="form-control" id="floor" name="floor" required>
+          </div>
+          <div class="form-group">
+            <label for="coordinates">Koordinat</label>
+            <input type="text" class="form-control" id="coordinates" name="coordinates" placeholder="Contoh: 3.123456, 101.654321" required>
+          </div>
+          <div class="form-group">
+            <label for="cctv">CCTV</label>
+            <select class="form-control" id="cctv" name="cctv" required>
+              <option value="Ada">Ada</option>
+              <option value="Tiada">Tiada</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="peopleCount">Jum Orang</label>
+            <input type="number" class="form-control" id="peopleCount" name="peopleCount" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        <button type="submit" form="subscriptionForm" class="btn btn-primary">Simpan</button>
+      </div>
+    </div>
+  </div>
+</div>
  
     <!-- /.content -->
   </div>

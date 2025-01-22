@@ -114,6 +114,13 @@
             <p>Tetapan Sistem</p>
           </a>
         </li>
+
+        <li class="nav-item">
+          <a href="alarm.php" class="nav-link">
+          <i class="nav-icon fas fa-bell"></i>
+            <p>Alarm</p>
+          </a>
+        </li>
       </ul>
     </nav>
     <!-- /.sidebar-menu -->

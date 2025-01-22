@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<?php include 'inc/meta.php'; ?>
+  <?php include 'inc/meta.php'; ?>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -18,10 +18,12 @@
     <link rel="stylesheet" href="file/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="file/dist/css/adminlte.min.css">
+
 </head>
-<body class="hold-transition layout-fixed text-sm">
+<body class="hold-transition   layout-fixed   text-sm ">
 <div class="wrapper">
   
+
 
   <!-- /header -->
   <?php
@@ -35,12 +37,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="page-title">Hubungi</h1>
+            <h1 class="page-title">Alarm Varification</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="?i=DB">Home</a></li>
-              <li class="breadcrumb-item active">Hubungi</li>
+              <li class="breadcrumb-item active">Alarm Varification</li>
             </ol>
           </div>
         </div>
@@ -53,81 +55,94 @@
         <div class="row">
           <div class="col-12">
             <div class="card card-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title">Senarai Hubungi</h3>
+            <div class="card-header text-center">
+              <div class="row">
+                <div class="col-6">
+                <button type="button" class="btn btn-danger w-100" >
+                Real Alarm
+              </button>
+                </div>
+                <div class="col-6">
+                    <button type="button" class="btn btn-warning w-100" >
+                    False Alarm
+                  </button>
+                </div>
+                </div>
               </div>
               
               <!-- /.card-header -->
-              <div class="card-body one">
-                <table id="example1" class="table table-bordered table-hover">
-                <thead class="table table-secondary">
-                  <tr class="text-left">
-                      <th>#</th>
-                      <th>Nama</th>
-                      <th>No.Tel</th>
-                      <th>T.Cipta </th>
-					            <th>Tindakan</th>
-											
-                  </tr>
-                </thead>
-                <tbody>
-  <tr>
-    <td>1</td>
-    <td>Balai Seberang Perai</td>
-    <td>03-1234567</td>
-    <td>01/01/2023</td>
-    <td>
-      <button class="btn btn-primary btn-sm">Lihat</button>
-      <button class="btn btn-warning btn-sm">Edit</button>
-      <button class="btn btn-danger btn-sm">Padam</button>
-    </td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Balai Khamis </td>
-    <td>09-2345678</td>
-    <td>15/02/2023</td>
-    <td>
-      <button class="btn btn-primary btn-sm">Lihat</button>
-      <button class="btn btn-warning btn-sm">Edit</button>
-      <button class="btn btn-danger btn-sm">Padam</button>
-    </td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Balai Masjid Kabir</td>
-    <td>07-3456789</td>
-    <td>10/03/2023</td>
-    <td>
-      <button class="btn btn-primary btn-sm">Lihat</button>
-      <button class="btn btn-warning btn-sm">Edit</button>
-      <button class="btn btn-danger btn-sm">Padam</button>
-    </td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Balai Sg Linggi</td>
-    <td>06-4567890</td>
-    <td>20/04/2023</td>
-    <td>
-      <button class="btn btn-primary btn-sm">Lihat</button>
-      <button class="btn btn-warning btn-sm">Edit</button>
-      <button class="btn btn-danger btn-sm">Padam</button>
-    </td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>Balai Negeri 9</td>
-    <td>08-5678901</td>
-    <td>30/05/2023</td>
-    <td>
-      <button class="btn btn-primary btn-sm">Lihat</button>
-      <button class="btn btn-warning btn-sm">Edit</button>
-      <button class="btn btn-danger btn-sm">Padam</button>
-    </td>
-  </tr>
-</tbody>
-                </table>
+              <div class="card-body ">
+                <div style="background-color: rgb(255, 196, 0);  padding: 15px; margin-bottom: 15px; border-radius: 15px;" > 
+                <i class="fas fa-bell"></i> Alarm / <?= date('Y-m-d H:i:s') ?>
+                </div>
+                <div style="background-color: rgb(162, 0, 255); color:white;  padding: 15px; margin-bottom: 15px; border-radius: 15px;" > 
+                <i class="fas fa-sync-alt"></i> Reset / <?= date('Y-m-d H:i:s') ?>
+                </div>
+                <div style="background-color: rgb(255, 196, 0);  padding: 15px; margin-bottom: 15px; border-radius: 15px;" > 
+                <i class="fas fa-bell"></i> Alarm / <?= date('Y-m-d H:i:s') ?>
+                </div>
+                <div style="background-color: rgb(162, 0, 255); color:white; padding: 15px; margin-bottom: 15px; border-radius: 15px;" > 
+                <i class="fas fa-sync-alt"></i> Reset / <?= date('Y-m-d H:i:s') ?>
+                </div>
+                
+
+                <div class="direct-chat-messages">
+                      <!-- Message. Default to the left -->
+                     
+
+                      <!-- Message to the right -->
+                      <div class="direct-chat-msg right">
+                        <div class="direct-chat-infos clearfix">
+                          <span class="direct-chat-name float-right">Yusuff</span>
+                          <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
+                        </div>
+                        <!-- /.direct-chat-infos -->
+                        <img class="direct-chat-img" src="file/dist/img/user8-128x128.jpg" alt="message user image">
+                        <!-- /.direct-chat-img -->
+                        <div class="direct-chat-text">
+                        This is real alarm?
+                        </div>
+                        <!-- /.direct-chat-text -->
+                      </div>
+                      <!-- /.direct-chat-msg -->
+
+                      <!-- Message. Default to the left -->
+                      <div class="direct-chat-msg">
+                        <div class="direct-chat-infos clearfix">
+                          <span class="direct-chat-name float-left">Mohd Amin</span>
+                          <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
+                        </div>
+                        <!-- /.direct-chat-infos -->
+                        <img class="direct-chat-img" src="file/dist/img/user1-128x128.jpg" alt="message user image">
+                        <!-- /.direct-chat-img -->
+                        <div class="direct-chat-text">
+                          Yes. Smoke Detector.
+                        </div>
+                        <!-- /.direct-chat-text -->
+                      </div>
+                      <!-- /.direct-chat-msg -->
+
+                      <!-- Message to the right -->
+                      <div class="direct-chat-msg right">
+                        <div class="direct-chat-infos clearfix">
+                          <span class="direct-chat-name float-right">Yusuff</span>
+                          <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
+                        </div>
+                        <!-- /.direct-chat-infos -->
+                        <img class="direct-chat-img" src="file/dist/img/user8-128x128.jpg" alt="message user image">
+                        <!-- /.direct-chat-img -->
+                        <div class="direct-chat-text">
+                          Okay Noted.
+                        </div>
+                        <!-- /.direct-chat-text -->
+                      </div>
+                      <!-- /.direct-chat-msg -->
+
+                    </div>
+
+                    <div style="background-color: rgb(0, 0, 0); color:white; padding: 15px; margin-bottom: 15px; border-radius: 15px;" > 
+                    <i class="fas fa-times"></i> False Alarm / <?= date('Y-m-d H:i:s') ?>
+                      </div>
               </div>
               <!-- /.card-body -->
             </div>
@@ -141,8 +156,6 @@
       </div>
       <!-- /.container-fluid -->
     </section>
-
-    
  
     <!-- /.content -->
   </div>

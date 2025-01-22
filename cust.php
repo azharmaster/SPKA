@@ -55,8 +55,11 @@
           <div class="col-12">
             <div class="card card-primary card-outline">
             <div class="card-header">
-                <h3 class="card-title">Senarai Pelanggan</h3>
-              </div>
+              <h3 class="card-title">Senarai Pelanggan</h3>
+              <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#companyModal">
+                Tambah Data
+              </button>
+            </div>
               
               <!-- /.card-header -->
               <div class="card-body one">
@@ -73,11 +76,97 @@
                       <th>Mula/ Tmt Kontrak</th>
                       <th>Jumlah Anggota</th>
                       <th>T.Cipta </th>
-						<th>Tindakan</th>
+						          <th>Tindakan</th>
                   </tr>
                 </thead>
-                  <tbody>
-                  </tbody>
+                <tbody>
+  <tr>
+    <td>1</td>
+    <td>SY001</td>
+    <td>Syarikat Maju Jaya</td>
+    <td>123456-A</td>
+    <td>03-12345678</td>
+    <td>No. 1, Jalan Maju, 50000 Kuala Lumpur</td>
+    <td>Smart Payroll System</td>
+    <td>01/01/2023 - 31/12/2023</td>
+    <td>50</td>
+    <td>01/01/2023</td>
+    <td>
+      <button class="btn btn-primary btn-sm">Lihat</button>
+      <button class="btn btn-warning btn-sm">Edit</button>
+      <button class="btn btn-danger btn-sm">Padam</button>
+    </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>SY002</td>
+    <td>Syarikat Ceria Sdn Bhd</td>
+    <td>789012-B</td>
+    <td>03-23456789</td>
+    <td>No. 22, Jalan Ceria, 47000 Petaling Jaya</td>
+    <td>HR Management System</td>
+    <td>01/06/2023 - 31/05/2024</td>
+    <td>30</td>
+    <td>01/06/2023</td>
+    <td>
+      <button class="btn btn-primary btn-sm">Lihat</button>
+      <button class="btn btn-warning btn-sm">Edit</button>
+      <button class="btn btn-danger btn-sm">Padam</button>
+    </td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>SY003</td>
+    <td>Teknologi Pintar Sdn Bhd</td>
+    <td>456789-C</td>
+    <td>03-34567890</td>
+    <td>No. 33, Jalan Teknologi, 40150 Shah Alam</td>
+    <td>Inventory Tracking System</td>
+    <td>01/09/2023 - 31/08/2024</td>
+    <td>20</td>
+    <td>01/09/2023</td>
+    <td>
+      <button class="btn btn-primary btn-sm">Lihat</button>
+      <button class="btn btn-warning btn-sm">Edit</button>
+      <button class="btn btn-danger btn-sm">Padam</button>
+    </td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>SY004</td>
+    <td>Kilang Besar Sdn Bhd</td>
+    <td>234567-D</td>
+    <td>03-45678901</td>
+    <td>No. 44, Jalan Perindustrian, 81200 Johor Bahru</td>
+    <td>Production Monitoring System</td>
+    <td>01/03/2023 - 28/02/2024</td>
+    <td>100</td>
+    <td>01/03/2023</td>
+    <td>
+      <button class="btn btn-primary btn-sm">Lihat</button>
+      <button class="btn btn-warning btn-sm">Edit</button>
+      <button class="btn btn-danger btn-sm">Padam</button>
+    </td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>SY005</td>
+    <td>Global Solutions</td>
+    <td>345678-E</td>
+    <td>03-56789012</td>
+    <td>No. 55, Jalan Antarabangsa, 50450 Kuala Lumpur</td>
+    <td>Cloud Storage System</td>
+    <td>01/07/2023 - 30/06/2024</td>
+    <td>75</td>
+    <td>01/07/2023</td>
+    <td>
+      <button class="btn btn-primary btn-sm">Lihat</button>
+      <button class="btn btn-warning btn-sm">Edit</button>
+      <button class="btn btn-danger btn-sm">Padam</button>
+    </td>
+  </tr>
+</tbody>
+
                 </table>
               </div>
               <!-- /.card-body -->
@@ -93,7 +182,59 @@
       <!-- /.container-fluid -->
     </section>
 
-    
+    <!-- Modal -->
+<div class="modal fade" id="companyModal" tabindex="-1" role="dialog" aria-labelledby="companyModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="companyModalLabel">Tambah Syarikat</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="companyForm">
+          <div class="form-group">
+            <label for="companyId">ID</label>
+            <input type="text" class="form-control" id="companyId" name="companyId" required>
+          </div>
+          <div class="form-group">
+            <label for="companyName">Nama Syarikat</label>
+            <input type="text" class="form-control" id="companyName" name="companyName" required>
+          </div>
+          <div class="form-group">
+            <label for="registrationNo">No. Pend</label>
+            <input type="text" class="form-control" id="registrationNo" name="registrationNo" required>
+          </div>
+          <div class="form-group">
+            <label for="phoneNo">No. Tel</label>
+            <input type="text" class="form-control" id="phoneNo" name="phoneNo" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Alamat</label>
+            <textarea class="form-control" id="address" name="address" rows="2" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="systemName">Nama Sistem</label>
+            <input type="text" class="form-control" id="systemName" name="systemName" required>
+          </div>
+          <div class="form-group">
+            <label for="contractPeriod">Mula/Tmt Kontrak</label>
+            <input type="text" class="form-control" id="contractPeriod" name="contractPeriod" placeholder="Contoh: 01/01/2023 - 31/12/2023" required>
+          </div>
+          <div class="form-group">
+            <label for="employeeCount">Jumlah Anggota</label>
+            <input type="number" class="form-control" id="employeeCount" name="employeeCount" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        <button type="submit" form="companyForm" class="btn btn-primary">Simpan</button>
+      </div>
+    </div>
+  </div>
+</div>
  
     <!-- /.content -->
   </div>
