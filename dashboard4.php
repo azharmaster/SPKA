@@ -52,7 +52,7 @@
           <!-- Main row -->
           <div class="row">
             <!-- Left col -->
-            <div class="col-md-8">
+            <div class="col-md-4">
               <!-- MAP & BOX PANE -->
               <div class="card">
 
@@ -111,117 +111,91 @@
               </div>
               <!-- /.card -->
 
-              <div class="row">
-                <div class="col-md-6">
-                  <!-- DIRECT CHAT -->
-                  <div class="card ">
-                    <!-- <div class="card-header">
-                <h3 class="card-title">Browser Usage</h3>
 
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-card-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
-              </div> -->
-                    <!-- /.card-header -->
-                    <div class="card-body ">
-                      <div class="row">
-                        <div class="col-md-8">
-                          <div class="chart-responsive">
-                            <canvas id="pieChart" height="150"></canvas>
-                          </div>
-                          <!-- ./chart-responsive -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-md-4">
-                          <ul class="chart-legend clearfix">
-                            <li><i class="far fa-circle text-danger"></i> Real Fire</li>
-                            <li><i class="far fa-circle text-success"></i> Alarm</li>
-                            <li><i class="far fa-circle text-warning"></i> False Alarm</li>
-
-                          </ul>
-                        </div>
-                        <!-- /.col -->
-                      </div>
-                      <!-- /.row -->
-                    </div>
-                    <!-- /.card-body -->
-                    <div class="card-footer p-0">
-                      <ul class="nav nav-pills flex-column">
-                        <li class="nav-item">
-                          <a href="#" class="nav-link">
-                            Kuala Lumpur
-                            <span class="float-right text-danger">
-                              <i class="fas fa-arrow-down text-sm"></i>
-                              12%</span>
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a href="#" class="nav-link">
-                            Selangor
-                            <span class="float-right text-success">
-                              <i class="fas fa-arrow-up text-sm"></i> 4%
-                            </span>
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a href="#" class="nav-link">
-                            Pahang
-                            <span class="float-right text-warning">
-                              <i class="fas fa-arrow-left text-sm"></i> 0%
-                            </span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- /.footer -->
-                  </div>
-                  <!-- /.card -->
-                </div>
-                <!-- /.col -->
-
-                <div class="col-md-6">
-                  <!-- USERS LIST -->
-                  <div class="card">
-                    <!-- <div class="card-header">
-                    <h3 class="card-title">Latest Members</h3>
-
-                    <div class="card-tools">
-                      <span class="badge badge-danger">8 New Members</span>
-                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                        <i class="fas fa-minus"></i>
-                      </button>
-                      <button type="button" class="btn btn-tool" data-card-widget="remove">
-                        <i class="fas fa-times"></i>
-                      </button>
-                    </div>
-                  </div> -->
-                    <!-- /.card-header -->
-                    <div class="card-body p-0">
-                      <canvas id="alarmChart" width="400" height="220"></canvas>
-                      <!-- /.users-list -->
-                    </div>
-                    <!-- /.card-body -->
-                    <!-- <div class="card-footer text-center">
-                    <a href="javascript:">View All Users</a>
-                  </div> -->
-                    <!-- /.card-footer -->
-                  </div>
-                  <!--/.card -->
-                </div>
-                <!-- /.col -->
-              </div>
-              <!-- /.row -->
 
             </div>
             <!-- /.col -->
 
             <div class="col-md-4">
+              <!-- MAP & BOX PANE -->
               <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                  <table class="table table-bordered table-hover h-90 text-center">
+                    <tr>
+                      <th colspan="2" class="text-center">KES KEBAKARAN</th>
+                    </tr>
+                    <tr>
+                      <th>Tarikh</th>
+                      <td>15 Januari 2025</td>
+                    </tr>
+                    <tr>
+                      <th>Bangunan</th>
+                      <td>Emhub </td>
+                    </tr>
+                    <tr>
+                      <th>Penyelia</th>
+                      <td>Amir Hamzah</td>
+                    </tr>
+                    <tr>
+                      <td><button class="btn btn-danger">Real Fire</button></td>
+                      <td><button class="btn btn-warning">False Alarm</button></td>
+                    </tr>
+                  </table>
+                  <table class="table table-bordered table-hover h-90 text-center">
+                    <tr>
+                      <th colspan="2" class="text-center">KES KEBAKARAN</th>
+                    </tr>
+                    <tr>
+                      <th>Tarikh</th>
+                      <td>15 Januari 2025</td>
+                    </tr>
+                    <tr>
+                      <th>Bangunan</th>
+                      <td>Emhub </td>
+                    </tr>
+                    <tr>
+                      <th>Penyelia</th>
+                      <td>Amir Hamzah</td>
+                    </tr>
+                    <tr>
+                      <td><button class="btn btn-danger">Real Fire</button></td>
+                      <td><button class="btn btn-warning">False Alarm</button></td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+
+            </div>
+
+            <div class="col-md-4">
+              <!-- MAP & BOX PANE -->
+              <div class="card ">
+                <!-- Card Header -->
+                <div class="card-header text-center bg-dark text-white">
+                  <h4>Rakaman CCTV</h4>
+                </div>
+                <!-- /.card-header -->
+
+                <!-- Card Body -->
+                <div class="card-body text-center ">
+                  <video width="100%" height="auto" controls>
+                    <source src="sample-cctv.mp4" type="video/mp4">
+                    Browser anda tidak menyokong elemen video. Sila muat turun video <a href="sample-cctv.mp4">di sini</a>.
+                  </video>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+
+            </div>
+          </div>
+          <!-- /.row -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card ">
                 <!-- <div class="card-header border-transparent">
                 <h3 class="card-title">History</h3>
 
@@ -311,44 +285,9 @@
                 <!-- /.card-footer -->
               </div>
               <!-- /.card -->
-
-              <div class="card">
-                <!-- <div class="card-header">
-                <h3 class="card-title">Browser Usage</h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-card-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
-              </div> -->
-                <!-- /.card-header -->
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="chart-responsive">
-                        <canvas id="fireChart" height="250"></canvas>
-                      </div>
-                      <!-- ./chart-responsive -->
-                    </div>
-
-                    <!-- /.col -->
-                  </div>
-                  <!-- /.row -->
-                </div>
-                <!-- /.card-body -->
-
-              </div>
-              <!-- /.card -->
-
-
             </div>
-            <!-- /.col -->
           </div>
-          <!-- /.row -->
+
         </div><!--/. container-fluid -->
       </section>
       <!-- /.content -->

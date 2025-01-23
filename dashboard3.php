@@ -114,7 +114,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <!-- DIRECT CHAT -->
-                  <div class="card ">
+                  <div class="card bg-success">
                     <!-- <div class="card-header">
                 <h3 class="card-title">Browser Usage</h3>
 
@@ -186,7 +186,7 @@
 
                 <div class="col-md-6">
                   <!-- USERS LIST -->
-                  <div class="card">
+                  <div class="card bg-warning">
                     <!-- <div class="card-header">
                     <h3 class="card-title">Latest Members</h3>
 
@@ -221,7 +221,7 @@
             <!-- /.col -->
 
             <div class="col-md-4">
-              <div class="card">
+              <div class="card bg-danger">
                 <!-- <div class="card-header border-transparent">
                 <h3 class="card-title">History</h3>
 
@@ -312,7 +312,7 @@
               </div>
               <!-- /.card -->
 
-              <div class="card">
+              <div class="card bg-info">
                 <!-- <div class="card-header">
                 <h3 class="card-title">Browser Usage</h3>
 

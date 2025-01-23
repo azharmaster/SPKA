@@ -129,7 +129,7 @@
       </li>
 
 
-   
+
 
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
@@ -140,10 +140,10 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
-        <i class="fas fa-user-tie"></i>
+          <i class="fas fa-user-tie"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right ">
-        
+
           <!-- <div class="dropdown-divider"></div> -->
           <a href="#" class="dropdown-item">
             <i class="fas fa-envelope mr-2"></i> Profile

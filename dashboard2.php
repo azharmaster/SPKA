@@ -27,7 +27,7 @@
   </style>
 </head>
 
-<body class="hold-transition dark-mode  layout-fixed   text-sm sidebar-collapse">
+<body class="hold-transition  layout-fixed   text-sm sidebar-collapse">
 
   <div class="wrapper">
 
@@ -69,7 +69,7 @@
                   </div><!-- /.d-md-flex -->
                 </div>
                 <!-- /.card-body -->
-                <div class="card-footer">
+                <div class="card-footer" >
                   <div class="row">
                     <div class="col-sm-4 col-6">
                       <div class="description-block border-right ">
@@ -114,7 +114,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <!-- DIRECT CHAT -->
-                  <div class="card ">
+                  <div class="card">
                     <!-- <div class="card-header">
                 <h3 class="card-title">Browser Usage</h3>
 
@@ -128,7 +128,7 @@
                 </div>
               </div> -->
                     <!-- /.card-header -->
-                    <div class="card-body ">
+                    <div class="card-body">
                       <div class="row">
                         <div class="col-md-8">
                           <div class="chart-responsive">
@@ -419,6 +419,7 @@
       options: options
     });
   </script>
+
   <!-- AdminLTE for demo purposes -->
   <script>
     // Inisialisasi peta
@@ -574,15 +575,25 @@
     // Ambil elemen canvas
     const ctx2 = document.getElementById('alarmChart').getContext('2d');
 
+    // Buat gradient warna biru ke biru muda
+    const gradient = ctx2.createLinearGradient(0, 0, 0, 400); // Gradient dari atas ke bawah
+    gradient.addColorStop(0, 'rgba(173, 216, 230, 0.8)'); // Biru pastel
+    gradient.addColorStop(1, 'rgba(144, 238, 144, 0.8)'); // Hijau pastel
+
     // Data untuk graf jumlah alarm setiap bulan
     const data2 = {
       labels: ['Januari', 'Februari', 'Mac', 'April', 'Mei', 'Jun', 'Julai', 'Ogos', 'September', 'Oktober', 'November', 'Disember'],
       datasets: [{
         label: 'Jumlah Alarm',
         data: [12, 18, 9, 14, 20, 22, 15, 30, 25, 28, 19, 16], // Gantikan dengan data sebenar
-        backgroundColor: 'rgba(173, 216, 230, 0.6)', // Warna pastel biru muda
-        borderColor: 'rgba(135, 206, 250, 1)', // Warna biru muda lembut
-        borderWidth: 1
+        fill: true, // Isi kawasan di bawah garisan
+        backgroundColor: gradient, // Gradient warna untuk kawasan bawah garisan
+        borderColor: 'rgba(54, 162, 235, 1)', // Warna garisan
+        tension: 0.4, // Melicinkan garisan
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(54, 162, 235, 1)', // Warna titik data
+        pointRadius: 4, // Saiz titik data
+        pointHoverRadius: 6 // Saiz titik semasa hover
       }]
     };
 
@@ -618,9 +629,9 @@
       }
     };
 
-    // Cipta graf bar
+    // Cipta graf line
     new Chart(ctx2, {
-      type: 'bar',
+      type: 'line', // Tukar jenis kepada 'line'
       data: data2,
       options: options2
     });
