@@ -16,7 +16,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="file/index2.html"><b>Admin</b>LTE</a>
+    <a href="file/index2.html"><b>SPKA</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="card">

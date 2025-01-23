@@ -62,52 +62,14 @@
                     <div class="p-1 flex-fill" style="overflow: hidden">
                       <!-- Map will be created here -->
                       <div>
-                        <div id="map" class="rounded shadow-sm" style="height: 550px;"></div>
+                        <div id="map" class="rounded shadow-sm" style="height: 320px;"></div>
                       </div>
                     </div>
 
                   </div><!-- /.d-md-flex -->
                 </div>
                 <!-- /.card-body -->
-                <div class="card-footer">
-                  <div class="row">
-                    <div class="col-sm-4 col-6">
-                      <div class="description-block border-right ">
-
-                        <h5 class="description-header">20 <span class="description-percentage text-danger"><i class="fas fa-caret-up"></i> 17%</span> /
-                          <span class="description-text">Real Fire </span>
-                        </h5>
-
-                      </div>
-                      <!-- /.description-block -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-sm-4 col-6">
-                      <div class="description-block border-right">
-
-                        <h5 class="description-header">40 <span class="description-percentage text-warning"><i class="fas fa-caret-left"></i> 0%</span> /
-                          <span class="description-text">Alarm </span>
-                        </h5>
-
-                      </div>
-                      <!-- /.description-block -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-sm-4 col-6">
-                      <div class="description-block ">
-
-                        <h5 class="description-header">13 <span class="description-percentage text-info"><i class="fas fa-caret-up"></i> 20%</span> /
-                          <span class="description-text">False Alarm </span>
-                        </h5>
-                      </div>
-                      <!-- /.description-block -->
-                    </div>
-                    <!-- /.col -->
-
-                  </div>
-                  <!-- /.row -->
-                </div>
-                <!-- /.card-footer -->
+                
               </div>
               <!-- /.card -->
 
@@ -142,27 +104,7 @@
                       <td><button class="btn btn-warning">False Alarm</button></td>
                     </tr>
                   </table>
-                  <table class="table table-bordered table-hover h-90 text-center">
-                    <tr>
-                      <th colspan="2" class="text-center">KES KEBAKARAN</th>
-                    </tr>
-                    <tr>
-                      <th>Tarikh</th>
-                      <td>15 Januari 2025</td>
-                    </tr>
-                    <tr>
-                      <th>Bangunan</th>
-                      <td>Emhub </td>
-                    </tr>
-                    <tr>
-                      <th>Penyelia</th>
-                      <td>Amir Hamzah</td>
-                    </tr>
-                    <tr>
-                      <td><button class="btn btn-danger">Real Fire</button></td>
-                      <td><button class="btn btn-warning">False Alarm</button></td>
-                    </tr>
-                  </table>
+              
                 </div>
                 <!-- /.card-body -->
               </div>
