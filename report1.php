@@ -7,6 +7,35 @@
     <title>Laporan Kebakaran</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @media print {
+            body * {
+                text-align: center !important;
+            }
+
+            .container {
+                width: 100% !important;
+                margin: 0 !important;
+            }
+
+            .row {
+                display: block !important;
+                margin: 0 auto !important;
+                width: 100% !important;
+            }
+
+            .col-md-6 {
+                width: 100% !important;
+                margin: 0 auto !important;
+                text-align: center !important;
+            }
+
+            canvas {
+                display: block !important;
+                margin: 0 auto !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -44,8 +73,38 @@
                         <td>456 Elm Street, Uptown</td>
                     </tr>
                     <!-- Tambah data lain di sini -->
+                    <tr>
+                        <td>24 Januari 2025</td>
+                        <td>BLD003</td>
+                        <td>Pavilion KL</td>
+                        <td><span class="badge badge-danger">Aktif (Kritikal)</span></td>
+                        <td>789 Pavilion Road, KL</td>
+                    </tr>
+                    <tr>
+                        <td>24 Januari 2025</td>
+                        <td>BLD004</td>
+                        <td>Hospital Putrajaya</td>
+                        <td><span class="badge badge-success">Diselesaikan</span></td>
+                        <td>101 Hospital Avenue, Putrajaya</td>
+                    </tr>
                 </tbody>
             </table>
+        </div>
+
+        <!-- Statistik Kes Kebakaran -->
+        <div class="card mb-4">
+            <div class="card-header">
+                Statistik Kes Kebakaran
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Jumlah Lokasi Dipantau: 15</li>
+                    <li class="list-group-item">Penggera Baru Hari Ini: 6</li>
+                    <li class="list-group-item">Penggera Kritikal (Aktif): 2</li>
+                    <li class="list-group-item">Penggera Diselesaikan (Hari Ini): 4</li>
+                    <li class="list-group-item">Lokasi Dalam Penyelenggaraan: 3</li>
+                </ul>
+            </div>
         </div>
 
         <!-- Grafik Statistik -->
@@ -59,10 +118,46 @@
                 <canvas id="fireStatusChart"></canvas>
             </div>
         </div>
+
+        <!-- Rincian Kes Kebakaran -->
+        <div class="card mb-4">
+            <div class="card-header">
+                Rincian Kes Kebakaran
+            </div>
+            <div class="card-body">
+                <h6>Pavilion KL</h6>
+                <p><strong>Jenis Penggera:</strong> Pengesan Haba</p>
+                <p><strong>Status:</strong> Aktif (Kritikal)</p>
+                <p><strong>Masa Dicetuskan:</strong> 2025-01-24, 2:20 PM</p>
+                <p><strong>Ditugaskan Kepada:</strong> Mohd Azman</p>
+                <p><strong>Nota Tindakan:</strong> Menunggu pasukan Bomba</p>
+
+                <h6>Hospital Putrajaya</h6>
+                <p><strong>Jenis Penggera:</strong> Pengesan Asap</p>
+                <p><strong>Status:</strong> Diselesaikan</p>
+                <p><strong>Masa Dicetuskan:</strong> 2025-01-24, 1:30 PM</p>
+                <p><strong>Ditugaskan Kepada:</strong> Nor Hafizah</p>
+                <p><strong>Nota Tindakan:</strong> Peranti dibaiki</p>
+            </div>
+        </div>
+
+        <!-- Cadangan dan Tindakan -->
+        <div class="card mb-4">
+            <div class="card-header">
+                Cadangan dan Tindakan
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Lokasi Kritikal: Pavilion KL dan KLIA perlu pemantauan segera oleh pasukan bomba dan teknikal.</li>
+                    <li class="list-group-item">Latihan Berkala: Cadangan untuk latihan simulasi keselamatan di semua lokasi setiap 3 bulan.</li>
+                    <li class="list-group-item">Kemaskini Sistem: Menambah baik algoritma pengesanan untuk mengurangkan penggera palsu.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <script>
-        // Data untuk graf
+        // Data untuk graf  
         const fireCasesCtx = document.getElementById('fireCasesChart').getContext('2d');
         new Chart(fireCasesCtx, {
             type: 'bar',
