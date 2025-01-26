@@ -11,28 +11,74 @@
         @media print {
             body * {
                 text-align: center !important;
+                font-size: 12px !important;
+                /* Reduce font size for print */
             }
 
             .container {
                 width: 100% !important;
                 margin: 0 !important;
+                padding: 0 !important;
             }
 
             .row {
-                display: block !important;
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
                 margin: 0 auto !important;
                 width: 100% !important;
             }
 
             .col-md-6 {
-                width: 100% !important;
-                margin: 0 auto !important;
+                width: 48% !important;
+                /* Adjusted to fit two columns side by side */
+                margin: 0 !important;
+                padding: 0 !important;
                 text-align: center !important;
             }
 
             canvas {
                 display: block !important;
                 margin: 0 auto !important;
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-size: 14px !important;
+                /* Reduce header font sizes */
+            }
+
+            p,
+            li {
+                margin: 0.5em 0 !important;
+                /* Reduce paragraph and list item margins */
+            }
+
+            .card {
+                margin-bottom: 0.5em !important;
+                /* Reduce card margins */
+            }
+
+            .table {
+                font-size: 12px !important;
+                /* Reduce table font size */
+            }
+
+            .table th,
+            .table td {
+                padding: 0.2em !important;
+                /* Reduce table cell padding */
+            }
+
+            .list-group-item {
+                padding: 0.2em 0.5em !important;
+                /* Reduce list group item padding */
             }
         }
     </style>
@@ -125,19 +171,36 @@
                 Rincian Kes Kebakaran
             </div>
             <div class="card-body">
-                <h6>Pavilion KL</h6>
-                <p><strong>Jenis Penggera:</strong> Pengesan Haba</p>
-                <p><strong>Status:</strong> Aktif (Kritikal)</p>
-                <p><strong>Masa Dicetuskan:</strong> 2025-01-24, 2:20 PM</p>
-                <p><strong>Ditugaskan Kepada:</strong> Mohd Azman</p>
-                <p><strong>Nota Tindakan:</strong> Menunggu pasukan Bomba</p>
-
-                <h6>Hospital Putrajaya</h6>
-                <p><strong>Jenis Penggera:</strong> Pengesan Asap</p>
-                <p><strong>Status:</strong> Diselesaikan</p>
-                <p><strong>Masa Dicetuskan:</strong> 2025-01-24, 1:30 PM</p>
-                <p><strong>Ditugaskan Kepada:</strong> Nor Hafizah</p>
-                <p><strong>Nota Tindakan:</strong> Peranti dibaiki</p>
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Nama Lokasi</th>
+                            <th>Jenis Penggera</th>
+                            <th>Status</th>
+                            <th>Masa Dicetuskan</th>
+                            <th>Ditugaskan Kepada</th>
+                            <th>Nota Tindakan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pavilion KL</td>
+                            <td>Pengesan Haba</td>
+                            <td><span class="badge badge-danger">Aktif (Kritikal)</span></td>
+                            <td>2025-01-24, 2:20 PM</td>
+                            <td>Mohd Azman</td>
+                            <td>Menunggu pasukan Bomba</td>
+                        </tr>
+                        <tr>
+                            <td>Hospital Putrajaya</td>
+                            <td>Pengesan Asap</td>
+                            <td><span class="badge badge-success">Diselesaikan</span></td>
+                            <td>2025-01-24, 1:30 PM</td>
+                            <td>Nor Hafizah</td>
+                            <td>Peranti dibaiki</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
@@ -157,7 +220,7 @@
     </div>
 
     <script>
-        // Data untuk graf  
+        // Data untuk graf    
         const fireCasesCtx = document.getElementById('fireCasesChart').getContext('2d');
         new Chart(fireCasesCtx, {
             type: 'bar',
