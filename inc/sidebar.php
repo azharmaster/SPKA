@@ -158,43 +158,50 @@
         </li>
 
         <li class="nav-item">
-        <a href="#" class="nav-link">
-          <i class="nav-icon fas fa-tachometer-alt"></i>
-          <p>
-            Laporan Kebakaran
-            <i class="fas fa-angle-left right"></i>
-          </p>
-        </a>
-        <ul class="nav nav-treeview">
-          <li class="nav-item">
-            <a href="report1.php" target="_blank" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Laporan 1</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="report2.php" target="_blank" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Laporan 2</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="report3.php" target="_blank" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Laporan 3</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="report4.php" target="_blank" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Laporan 4</p>
-            </a>
-          </li>
-        </ul>
-      </li>
+          <a href="floorplan.php" class="nav-link">
+            <i class="nav-icon fas fa-bell"></i>
+            <p>floorplan</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Laporan Kebakaran
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="report1.php" target="_blank" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Laporan 1</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="report2.php" target="_blank" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Laporan 2</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="report3.php" target="_blank" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Laporan 3</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="report4.php" target="_blank" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Laporan 4</p>
+              </a>
+            </li>
+          </ul>
+        </li>
       </ul>
 
-    
+
     </nav>
     <!-- /.sidebar-menu -->
   </div>

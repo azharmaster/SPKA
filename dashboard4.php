@@ -49,41 +49,32 @@
 
 
 
-          <!-- Main row -->
           <div class="row">
             <!-- Left col -->
             <div class="col-md-4">
               <!-- MAP & BOX PANE -->
-              <div class="card">
-
+              <div class="card" style="display: flex; flex-direction: column; height: 100%;">
                 <!-- /.card-header -->
-                <div class="card-body p-0">
-                  <div class="d-md-flex">
-                    <div class="p-1 flex-fill" style="overflow: hidden">
-                      <!-- Map will be created here -->
-                      <div>
-                        <div id="map" class="rounded shadow-sm" style="height: 320px;"></div>
-                      </div>
+                <div class="card-body" style="display: flex; flex-direction: column; flex: 1; padding: 0;">
+                  <div class="p-1 flex-fill" style="overflow: hidden">
+                    <!-- Map will be created here -->
+                    <div>
+                      <div id="map" class="rounded shadow-sm" style="height: 320px;"></div>
                     </div>
-
-                  </div><!-- /.d-md-flex -->
+                  </div>
                 </div>
                 <!-- /.card-body -->
-                
               </div>
               <!-- /.card -->
-
-
-
             </div>
             <!-- /.col -->
 
             <div class="col-md-4">
               <!-- MAP & BOX PANE -->
-              <div class="card">
+              <div class="card" style="display: flex; flex-direction: column; height: 100%;">
                 <!-- /.card-header -->
-                <div class="card-body">
-                  <table class="table table-bordered table-hover h-90 text-center">
+                <div class="card-body" style="display: flex; flex-direction: column; flex: 1;">
+                  <table class="table table-bordered table-hover h-90 text-center" style="flex: 1;">
                     <tr>
                       <th colspan="2" class="text-center">KES KEBAKARAN</th>
                     </tr>
@@ -104,17 +95,15 @@
                       <td><button class="btn btn-warning">False Alarm</button></td>
                     </tr>
                   </table>
-              
                 </div>
                 <!-- /.card-body -->
               </div>
               <!-- /.card -->
-
             </div>
 
             <div class="col-md-4">
               <!-- MAP & BOX PANE -->
-              <div class="card ">
+              <div class="card" style="display: flex; flex-direction: column; height: 100%;">
                 <!-- Card Header -->
                 <div class="card-header text-center bg-dark text-white">
                   <h4>Rakaman CCTV</h4>
@@ -122,8 +111,8 @@
                 <!-- /.card-header -->
 
                 <!-- Card Body -->
-                <div class="card-body text-center ">
-                  <video width="100%" height="auto" controls>
+                <div class="card-body" style="display: flex; flex-direction: column; flex: 1; text-align: center;">
+                  <video width="100%" height="auto" controls style="flex: 1;">
                     <source src="sample-cctv.mp4" type="video/mp4">
                     Browser anda tidak menyokong elemen video. Sila muat turun video <a href="sample-cctv.mp4">di sini</a>.
                   </video>
@@ -131,9 +120,10 @@
                 <!-- /.card-body -->
               </div>
               <!-- /.card -->
-
             </div>
           </div>
+          <!-- /.row -->
+          <br>
           <!-- /.row -->
           <div class="row">
             <div class="col-md-12">
