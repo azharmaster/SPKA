@@ -65,12 +65,159 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-4">
+                      <div class="row">
 
+                        <div class="col-lg-12 col-12">
+                          <!-- small box -->
+                          <div class="small-box ">
+                            <div class="inner">
+                              <h3 class="text-center">FIRE ALARMS</h3>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Device -->
+                        <div class="col-lg-6 col-6">
+                          <!-- small box -->
+                          <div class="small-box bg-info">
+                            <div class="inner">
+                              <h3>3</h3>
+                              <p>Device</p>
+                            </div>
+                            <div class="icon">
+                              <i class="fas fa-thermometer"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- ./col -->
+
+                        <!-- Sensor -->
+                        <div class="col-lg-6 col-6">
+                          <!-- small box -->
+                          <div class="small-box bg-success">
+                            <div class="inner">
+                              <h3>53</h3>
+                              <p>Sensor</p>
+                            </div>
+                            <div class="icon">
+                              <i class="fas fa-thermometer-half"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- ./col -->
+
+                        <!-- Detector -->
+                        <div class="col-lg-6 col-6">
+                          <!-- small box -->
+                          <div class="small-box bg-warning">
+                            <div class="inner">
+                              <h3>44</h3>
+                              <p>Detector</p>
+                            </div>
+                            <div class="icon">
+                              <i class="fas fa-seedling"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- ./col -->
+
+                        <!-- People -->
+                        <div class="col-lg-6 col-6">
+                          <!-- small box -->
+                          <div class="small-box bg-danger">
+                            <div class="inner">
+                              <h3>65</h3>
+                              <p>People</p>
+                            </div>
+                            <div class="icon">
+                              <i class="fas fa-user-tie"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- ./col -->
+
+                        <!-- Temperature -->
+                        <div class="col-lg-6 col-6">
+                          <!-- small box -->
+                          <div class="small-box bg-primary">
+                            <div class="inner">
+                              <h3>22°C</h3>
+                              <p>Temperature</p>
+                            </div>
+                            <div class="icon">
+                              <i class="fas fa-temperature-high"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- ./col -->
+
+                        <!-- Humidity -->
+                        <div class="col-lg-6 col-6">
+                          <!-- small box -->
+                          <div class="small-box bg-secondary">
+                            <div class="inner">
+                              <h3>45%</h3>
+                              <p>Humidity</p>
+                            </div>
+                            <div class="icon">
+                              <i class="fas fa-tint"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- ./col -->
+
+                        <!-- CO2 Level -->
+                        <div class="col-lg-6 col-6">
+                          <!-- small box -->
+                          <div class="small-box bg-teal">
+                            <div class="inner">
+                              <h3>400 ppm</h3>
+                              <p>CO2 Level</p>
+                            </div>
+                            <div class="icon">
+                              <i class="fas fa-chart-line"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- ./col -->
+
+                        <!-- Power Consumption -->
+                        <div class="col-lg-6 col-6">
+                          <!-- small box -->
+                          <div class="small-box bg-maroon">
+                            <div class="inner">
+                              <h3>350 W</h3>
+                              <p>Power Consumption</p>
+                            </div>
+                            <div class="icon">
+                              <i class="fas fa-bolt"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                      </div>
                     </div>
                     <div class="col-8">
-                      <img src="img/floor1.jpeg" class="img-fluid"><img src="img/floor2.jpeg" class="img-fluid"><img src="img/floor3.jpeg" class="img-fluid">
-
+                      <div class="position-relative">
+                        <img src="img/floor1.jpeg" class="img-fluid" width="700px">
+                        <i class="fab fa-orcid position-absolute" style="top: 30px; left: 100px; color: red; font-size: 24px;"></i>
+                        <i class="fab fa-orcid position-absolute" style="top: 30px; left: 400px; color: red; font-size: 24px;"></i>
+                        <i class="fab fa-orcid position-absolute" style="top: 120px; left: 250px; color: red; font-size: 24px;"></i>
+                      </div>
+                      <div class="position-relative">
+                        <img src="img/floor2.jpeg" class="img-fluid" width="700px">
+                        <i class="fab fa-orcid position-absolute" style="top: 650px; left: 30px; color: red; font-size: 24px;"></i>
+                        <i class="fab fa-orcid position-absolute" style="top: 650px; left: 150px; color: red; font-size: 24px;"></i>
+                        <i class="fab fa-orcid position-absolute" style="top: 250px; left: 200px; color: red; font-size: 24px;"></i>
+                      </div>
+                      <div class="position-relative">
+                        <img src="img/floor3.jpeg" class="img-fluid" width="700px">
+                        <i class="fab fa-orcid position-absolute" style="top: 650px; left: 500px; color: red; font-size: 24px;"></i>
+                        <i class="fab fa-orcid position-absolute" style="top: 280px; left: 230px; color: red; font-size: 24px;"></i>
+                        <i class="fab fa-orcid position-absolute" style="top: 120px; left: 400px; color: red; font-size: 24px;"></i>
+                      </div>
                     </div>
+
                   </div>
 
                 </div>

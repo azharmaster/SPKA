@@ -159,7 +159,7 @@
 
         <li class="nav-item">
           <a href="floorplan.php" class="nav-link">
-            <i class="nav-icon fas fa-bell"></i>
+            <i class="nav-icon fas fa-map"></i>
             <p>floorplan</p>
           </a>
         </li>
