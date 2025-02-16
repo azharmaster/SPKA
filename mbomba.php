@@ -1,4 +1,11 @@
+<?php
+session_start();
+include 'inc/config.php';
 
+if (!isset($_SESSION['alogin'])) {
+  header("Location: index.php");
+  exit();
+}?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,7 +75,7 @@
                   <tr class="text-left">
                     <th>#</th>
                       <th>ID</th>
-                      <th>Penyelia </th>
+                      <th>Nama Balai </th>
                       <th>No.Tel </th>
                       <th>Alamat </th>
                       <th>Koordinat</th>
@@ -78,81 +85,35 @@
                   </tr>
                 </thead>
                 <tbody>
-  <tr>
-    <td>1</td>
-    <td>BB001</td>
-    <td>Encik Ahmad bin Razak</td>
-    <td>03-12345678</td>
-    <td>No. 1, Jalan Bomba, 50000 Kuala Lumpur</td>
-    <td>3.1390° N, 101.6869° E</td>
-    <td>30</td>
-    <td>01/01/2023</td>
-    <td>
-      <button class="btn btn-primary btn-sm">Lihat</button>
-      <button class="btn btn-warning btn-sm">Edit</button>
-      <button class="btn btn-danger btn-sm">Padam</button>
-    </td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>BB002</td>
-    <td>Encik Ismail bin Rahim</td>
-    <td>03-23456789</td>
-    <td>No. 22, Jalan Merah, 47000 Petaling Jaya</td>
-    <td>3.1072° N, 101.6078° E</td>
-    <td>25</td>
-    <td>01/06/2023</td>
-    <td>
-      <button class="btn btn-primary btn-sm">Lihat</button>
-      <button class="btn btn-warning btn-sm">Edit</button>
-      <button class="btn btn-danger btn-sm">Padam</button>
-    </td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>BB003</td>
-    <td>Encik Zainal bin Osman</td>
-    <td>03-34567890</td>
-    <td>No. 33, Jalan Shah Alam, 40150 Shah Alam</td>
-    <td>3.0738° N, 101.5183° E</td>
-    <td>40</td>
-    <td>01/09/2023</td>
-    <td>
-      <button class="btn btn-primary btn-sm">Lihat</button>
-      <button class="btn btn-warning btn-sm">Edit</button>
-      <button class="btn btn-danger btn-sm">Padam</button>
-    </td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>BB004</td>
-    <td>Encik Hakim bin Aziz</td>
-    <td>03-45678901</td>
-    <td>No. 44, Jalan Bukit Indah, 81200 Johor Bahru</td>
-    <td>1.4927° N, 103.7414° E</td>
-    <td>35</td>
-    <td>01/03/2023</td>
-    <td>
-      <button class="btn btn-primary btn-sm">Lihat</button>
-      <button class="btn btn-warning btn-sm">Edit</button>
-      <button class="btn btn-danger btn-sm">Padam</button>
-    </td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>BB005</td>
-    <td>Encik Ramli bin Hashim</td>
-    <td>03-56789012</td>
-    <td>No. 55, Jalan Api, 50450 Kuala Lumpur</td>
-    <td>3.1599° N, 101.7090° E</td>
-    <td>50</td>
-    <td>01/07/2023</td>
-    <td>
-      <button class="btn btn-primary btn-sm">Lihat</button>
-      <button class="btn btn-warning btn-sm">Edit</button>
-      <button class="btn btn-danger btn-sm">Padam</button>
-    </td>
-  </tr>
+                <?php
+                      $query = mysqli_query($con, "SELECT * FROM `balai`");
+                      $cnt = 1;
+                      while ($row = mysqli_fetch_array($query)) {
+
+                      ?>
+                        <tr>
+                          <td><?= $cnt; ?></td>
+                          <td><?= $row['noreg']; ?></td>
+                          <td><?= $row['nama']; ?></td>
+                          <td><?= $row['notel']; ?></td>
+                          <td><?= $row['alamat']; ?></td>
+                          <td><?= $row['koordinat']; ?></td>
+                          <td><?= $row['jumAnggota']; ?></td>
+                          <td><?= $row['tcipta']; ?></td>
+                          <td>
+                            <div class="dropdown">
+                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton<?= $row['id']; ?>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Action
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton<?= $row['id']; ?>">
+                                <a class="dropdown-item" href="edit_user.php?id=<?= $row['id']; ?>">Edit</a>
+                                <a class="dropdown-item delete-btn" href="#" data-id="<?= $row['id']; ?>">Delete</a>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      <?php $cnt = $cnt + 1;
+                      } ?>
 </tbody>
 
                 </table>

@@ -153,7 +153,7 @@
             <i class="fas fa-users mr-2"></i> Change Password
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="logout.php" class="dropdown-item">
             <i class="fas fa-file mr-2"></i>Log Out
           </a>
           <!-- <div class="dropdown-divider"></div>
