@@ -6,7 +6,7 @@ $_SESSION['alogin'] == "";
 session_unset();
 //session_destroy();
 
-$_SESSION['errmsg'] = "You have successfully logout";
+$_SESSION['errmsg'] = "Anda telah berjaya log keluar";
 ?>
 <script language="javascript">
     document.location = "index.php";

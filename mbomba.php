@@ -5,7 +5,40 @@ include 'inc/config.php';
 if (!isset($_SESSION['alogin'])) {
   header("Location: index.php");
   exit();
-}?>
+}
+
+
+if (isset($_POST['submit'])) {
+  $namabalai=$_POST['namabalai'];
+  $noreg=$_POST['noreg'];
+  $alamat=$_POST['alamat'];
+  $notel=$_POST['notel'];
+  $koordinat=$_POST['koordinat'];
+  $jum=$_POST['jum'];
+
+  $sql=mysqli_query($con,"INSERT INTO `balai`( `nama`, `noreg`, `notel`, `alamat`, `koordinat`, `jumAnggota`) 
+  VALUES ('$namabalai','$noreg','$notel','$alamat','$koordinat','$jum')");
+  if($sql){
+    echo "<script type='text/javascript'> alert('Data Berjaya Disimpan.');  </script>";
+  }else{
+    echo "<script type='text/javascript'> alert('Maaf!! Data Tidak Berjaya Disimpan.');  </script>";
+  }
+
+}
+
+if (isset($_POST['del'])) {
+
+  $id=$_POST['id'];
+
+  $sql=mysqli_query($con,"DELETE FROM `balai` WHERE id='$id'");
+  if($sql){
+    echo "<script type='text/javascript'> alert('Data Berjaya Dipadam.');  </script>";
+  }else{
+    echo "<script type='text/javascript'> alert('Maaf!! Data Tidak Berjaya Dipadam.');  </script>";
+  }
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -101,16 +134,33 @@ if (!isset($_SESSION['alogin'])) {
                           <td><?= $row['jumAnggota']; ?></td>
                           <td><?= $row['tcipta']; ?></td>
                           <td>
-                            <div class="dropdown">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton<?= $row['id']; ?>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Action
-                              </button>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton<?= $row['id']; ?>">
-                                <a class="dropdown-item" href="edit_user.php?id=<?= $row['id']; ?>">Edit</a>
-                                <a class="dropdown-item delete-btn" href="#" data-id="<?= $row['id']; ?>">Delete</a>
-                              </div>
-                            </div>
-                          </td>
+                                                    <button type="button"
+                                                        class="btn btn-flat btn-default btn-sm dropdown-toggle dropdown-icon"
+                                                        data-toggle="dropdown">
+                                                        Action
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu" role="menu">
+
+                                                        <form method="POST">
+                                                            <input type="hidden" name="id"
+                                                                value="<?= htmlspecialchars($row['id']) ?>">
+                                                            <button class="dropdown-item " type="submit"
+                                                                name="del"
+                                                                onClick="return confirm('Adakah anda pasti mahu memadamkan?')">
+                                                                <span class="fas fa-trash text-danger"></span> Padam
+                                                            </button>
+                                                        </form>
+                                                        <a class="dropdown-item"
+                                                            href="profile.php?id=<?= htmlspecialchars($row['id']) ?>">
+                                                            <span class="fas fa-user"></span> Lihat Profile
+                                                        </a>
+                                                        <a class="dropdown-item"
+                                                            href="edit.php?id=<?= htmlspecialchars($row['id']) ?>">
+                                                            <span class="fas fa-edit"></span> Kemaskini
+                                                        </a>
+                                                    </div>
+                                                </td>
                         </tr>
                       <?php $cnt = $cnt + 1;
                       } ?>
@@ -142,37 +192,38 @@ if (!isset($_SESSION['alogin'])) {
         </button>
       </div>
       <div class="modal-body">
-        <form id="supervisorForm">
+        <form method="POST">
           <div class="form-group">
-            <label for="id">ID</label>
-            <input type="text" class="form-control" id="id" name="id" required>
+            <label for="namabalai">Nama Balai</label>
+            <input type="text" class="form-control" id="namabalai" name="namabalai" required>
+          </div> 
+          <div class="form-group">
+            <label for="noreg">No Pendaftaran</label>
+            <input type="text" class="form-control" id="noreg" name="noreg" required>
           </div>
           <div class="form-group">
-            <label for="supervisor">Penyelia</label>
-            <input type="text" class="form-control" id="supervisor" name="supervisor" required>
+            <label for="notel">No. Tel</label>
+            <input type="text" class="form-control" id="notel" name="notel" required>
           </div>
           <div class="form-group">
-            <label for="phoneNo">No. Tel</label>
-            <input type="text" class="form-control" id="phoneNo" name="phoneNo" required>
+            <label for="alamat">Alamat</label>
+            <textarea class="form-control" id="alamat" name="alamat" rows="2" required></textarea>
           </div>
           <div class="form-group">
-            <label for="address">Alamat</label>
-            <textarea class="form-control" id="address" name="address" rows="2" required></textarea>
+            <label for="koordinat">Koordinat</label>
+            <input type="text" class="form-control" id="koordinat" name="koordinat" placeholder="Contoh: 3.123456, 101.654321" required>
           </div>
           <div class="form-group">
-            <label for="coordinates">Koordinat</label>
-            <input type="text" class="form-control" id="coordinates" name="coordinates" placeholder="Contoh: 3.123456, 101.654321" required>
+            <label for="jum">Jumlah Anggota</label>
+            <input type="number" class="form-control" id="jum" name="jum" required>
           </div>
-          <div class="form-group">
-            <label for="employeeCount">Jumlah Anggota</label>
-            <input type="number" class="form-control" id="employeeCount" name="employeeCount" required>
-          </div>
-        </form>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        <button type="submit" form="supervisorForm" class="btn btn-primary">Simpan</button>
+        <button type="submit" name="submit"  class="btn btn-primary">Simpan</button>
       </div>
+      </form>
     </div>
   </div>
 </div>

@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
     header("location:http://$host$uri/$extra");
     exit();
   } else {
-    $_SESSION['errmsg'] = 'Invalid username or password';
+    $_SESSION['errmsg'] = 'Nama pengguna atau kata laluan tidak sah';
     $extra = 'index.php';
     $host = $_SERVER['HTTP_HOST'];
     $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
